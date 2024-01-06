@@ -12,13 +12,28 @@
     <header class="page-header">
       <div class="page-wrapper">
         <a class="logo page-header__logo" href="/">
-          <img
-            class="logo__image"
-            height="30"
-            width="30"
-            src="/test"
-            alt="Логотип Cat energy: Кот супергерой"
-          />
+          <picture class="logo__picture">
+            <source
+              class="logo__image"
+              media="(min-width: 1440px)"
+              srcset="./images/logo-desktop.svg"
+              type="image/svg+xml"
+            >
+            <source
+              class="logo__image"
+              media="(min-width: 768px)"
+              srcset="./images/logo-tablet.svg"
+              type="image/svg+xml"
+            >
+            <img
+              class="logo__image"
+              src="./images/logo-mobile.svg"
+              width="34"
+              height="38"
+              alt="Логотип Cat energy: Кот супергерой">
+          </picture>
+
+          <svg class="company-name" width="101" height="18" role="img"></svg>
         </a>
 
         <div class="page-header__menu menu">
@@ -55,13 +70,38 @@
           <div class="promo__content">
             <h2 class="promo__heading">Функциональное питание для котов</h2>
             <p class="promo__slogan">Занялся собой? Займись котом!</p>
-            <a class="promo__button button" href="./form.html"
-              >подобрать программу</a
-            >
+            <a class="promo__button button" href="./form.html">подобрать программу</a>
           </div>
         </div>
 
-        <div class="promo__visual"><img class="promo__image" src="/test" alt="Корм Кэт энерджи" width="30" height="30" /></div>
+        <div class="promo__visual">
+          <picture class="promo__picture">
+            <source
+              class="promo__image"
+              width="552"
+              height="499"
+              media="(min-width: 1440px)"
+              srcset="./images/promo-desktop@1x.png, ./images/promo-desktop@2x.png 2x"
+              type="image/png"
+            >
+            <source
+              class="promo__image"
+              width="709"
+              height="609"
+              media="(min-width: 768px)"
+              srcset="./images/promo-tablet@1x.png, ./images/promo-tablet@2x.png 2x"
+              type="image/png"
+            >
+            <img
+              class="promo__image"
+              width="280"
+              height="270"
+              src="./images/promo@1x.png"
+              srcset="./images/promo@2x.png 2x"
+              alt="Корм Кэт энерджи Про со вкусом курицы: 500 грамм"
+            />
+          </picture>
+        </div>
       </section>
 
       <section class="diet">
@@ -205,8 +245,8 @@
 
     <footer class="page-footer">
       <div class="page-wrapper page-footer__wrapper">
-        <a class="page-footer__company-name company-name" href="/">
-          <img class="company-name__image" src="/test" alt="Имя компании" width="30" height="30" />
+        <a class="page-footer__company-name company-name" href="#">
+          <svg class="company-name__image" width="128" height="24" role="img"></svg>
         </a>
 
         <ul class="page-footer__socials socials">
