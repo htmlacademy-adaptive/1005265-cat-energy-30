@@ -3,22 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <title>Каталог продукции Cat energy</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="icon" href="./favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="./favicons/icon.svg" sizes="32x32" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./favicons/180.png" sizes="180x180" type="image/png">
+    <link rel="manifest" href="./manifest.webmanifest">
+
+    <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
     <header class="page-header">
       <div class="page-wrapper">
         <a class="logo page-header__logo" href="/">
-          <img
-            class="logo__image"
-            src="./test"
-            alt="Логотип Cat energy: Кот супергерой"
-            width="30"
-            height="30"
-          />
+          <picture class="logo__picture">
+            <source
+              class="logo__image"
+              media="(min-width: 1440px)"
+              srcset="./images/logo-desktop.svg"
+              type="image/svg+xml"
+            >
+            <source
+              class="logo__image"
+              media="(min-width: 768px)"
+              srcset="./images/logo-tablet.svg"
+              type="image/svg+xml"
+            >
+            <img
+              class="logo__image"
+              src="./images/logo-mobile.svg"
+              width="34"
+              height="38"
+              alt="Логотип Cat energy: Кот супергерой">
+          </picture>
+
+          <svg class="company-name" width="101" height="18" role="img"></svg>
         </a>
 
         <div class="page-header__menu menu">
@@ -54,14 +74,24 @@
           <li class="main-catalog__item main-catalog__item--1">
             <article class="card">
               <a class="card__visual" href="./product.html">
-                <img
-                  class="card__image"
-                  src="/test"
-                  alt="Кэт энерджи про 500 граммов, со вкусом курицы"
-                  loading="lazy"
-                  width="30"
-                  height="30"
-                />
+                <picture class="card__picture">
+                  <source
+                    class="card__image"
+                    width="161"
+                    height="172"
+                    media="(min-width: 768px)"
+                    srcset="./images/catalog-1-tablet@1x.png, ./images/catalog-1-tablet@2x.png 2x"
+                    type="image/png"
+                  >
+                  <img
+                    class="card__image"
+                    width="68"
+                    height="86"
+                    src="./images/catalog-1@1x.png"
+                    srcset="./images/catalog-1@2x.png 2x"
+                    alt="Кэт энерджи про 500 граммов, со вкусом курицы"
+                  />
+                </picture>
               </a>
 
               <div class="card__content">
@@ -97,14 +127,32 @@
           <li class="main-catalog__item main-catalog__item--2">
             <article class="card">
               <a class="card__visual" href="./product.html">
-                <img
-                  class="card__image"
-                  src="/test"
-                  alt="Кэт энерджи про 1000 граммов, со вкусом курицы"
-                  loading="lazy"
-                  width="30"
-                  height="30"
-                />
+                <picture>
+                  <source
+                    class="card__image"
+                    width="172"
+                    height="196"
+                    media="(min-width: 1440px)"
+                    srcset="./images/catalog-2-desktop@1x.png, ./images/catalog-2-desktop@2x.png 2x"
+                    type="image/png"
+                  >
+                  <source
+                    class="card__image"
+                    width="168"
+                    height="206"
+                    media="(min-width: 768px)"
+                    srcset="./images/catalog-2-tablet@1x.png, ./images/catalog-2-tablet@2x.png 2x"
+                    type="image/png"
+                  >
+                  <img
+                    class="card__image card__image--big"
+                    width="84"
+                    height="100"
+                    src="./images/catalog-2@1x.png"
+                    srcset="./images/catalog-2@2x.png 2x"
+                    alt="Кэт энерджи про 1000 граммов, со вкусом курицы"
+                  />
+                </picture>
               </a>
 
               <div class="card__content">
@@ -140,14 +188,24 @@
           <li class="main-catalog__item main-catalog__item--3">
             <article class="card">
               <a class="card__visual" href="./product.html">
-                <img
-                  class="card__image"
-                  src="/test"
-                  alt="Кэт энерджи про 500 граммов, со вкусом рыбы"
-                  loading="lazy"
-                  width="30"
-                  height="30"
-                />
+                <picture class="card__picture">
+                  <source
+                    class="card__image"
+                    width="161"
+                    height="172"
+                    media="(min-width: 768px)"
+                    srcset="./images/catalog-3-tablet@1x.png, ./images/catalog-3-tablet@2x.png 2x"
+                    type="image/png"
+                  >
+                  <img
+                    class="card__image"
+                    width="68"
+                    height="86"
+                    src="./images/catalog-3@1x.png"
+                    srcset="./images/catalog-3@2x.png 2x"
+                    alt="Кэт энерджи про 500 граммов, со вкусом рыбы"
+                  />
+                </picture>
               </a>
 
               <div class="card__content">
@@ -177,14 +235,32 @@
           <li class="main-catalog__item main-catalog__item--4">
             <article class="card">
               <a class="card__visual" href="./product.html">
-                <img
-                  class="card__image"
-                  src="/test"
-                  alt="Кэт энерджи про 1000 граммов, со вкусом рыбы"
-                  loading="lazy"
-                  width="30"
-                  height="30"
-                />
+                <picture>
+                  <source
+                    class="card__image"
+                    width="172"
+                    height="196"
+                    media="(min-width: 1440px)"
+                    srcset="./images/catalog-4-desktop@1x.png, ./images/catalog-4-desktop@2x.png 2x"
+                    type="image/png"
+                  >
+                  <source
+                    class="card__image"
+                    width="168"
+                    height="206"
+                    media="(min-width: 768px)"
+                    srcset="./images/catalog-4-tablet@1x.png, ./images/catalog-4-tablet@2x.png 2x"
+                    type="image/png"
+                  >
+                  <img
+                    class="card__image card__image--big"
+                    width="84"
+                    height="100"
+                    src="./images/catalog-4@1x.png"
+                    srcset="./images/catalog-4@2x.png 2x"
+                    alt="Кэт энерджи про 1000 граммов, со вкусом рыбы"
+                  />
+                </picture>
               </a>
 
               <div class="card__content">
@@ -220,14 +296,24 @@
           <li class="main-catalog__item main-catalog__item--5">
             <article class="card">
               <a class="card__visual" href="./product.html">
-                <img
-                  class="card__image"
-                  src="/test"
-                  alt="Кэт энерджи слим 500 граммов, со вкусом гречки"
-                  loading="lazy"
-                  width="30"
-                  height="30"
-                />
+                <picture class="card__picture">
+                  <source
+                    class="card__image"
+                    width="161"
+                    height="172"
+                    media="(min-width: 768px)"
+                    srcset="./images/catalog-5-tablet@1x.png, ./images/catalog-5-tablet@2x.png 2x"
+                    type="image/png"
+                  >
+                  <img
+                    class="card__image"
+                    width="68"
+                    height="86"
+                    src="./images/catalog-5@1x.png"
+                    srcset="./images/catalog-5@2x.png 2x"
+                    alt="Кэт энерджи про 500 граммов, со вкусом гречки"
+                  />
+                </picture>
               </a>
 
               <div class="card__content">
@@ -263,14 +349,32 @@
           <li class="main-catalog__item main-catalog__item--6">
             <article class="card">
               <a class="card__visual" href="./product.html">
-                <img
-                  class="card__image"
-                  src="/test"
-                  alt="Кэт энерджи слим 1000 граммов, со вкусом гречки"
-                  loading="lazy"
-                  width="30"
-                  height="30"
-                />
+                <picture>
+                  <source
+                    class="card__image"
+                    width="172"
+                    height="196"
+                    media="(min-width: 1440px)"
+                    srcset="./images/catalog-6-desktop@1x.png, ./images/catalog-6-desktop@2x.png 2x"
+                    type="image/png"
+                  >
+                  <source
+                    class="card__image"
+                    width="168"
+                    height="206"
+                    media="(min-width: 768px)"
+                    srcset="./images/catalog-6-tablet@1x.png, ./images/catalog-6-tablet@2x.png 2x"
+                    type="image/png"
+                  >
+                  <img
+                    class="card__image card__image--big"
+                    width="84"
+                    height="100"
+                    src="./images/catalog-6@1x.png"
+                    srcset="./images/catalog-6@2x.png 2x"
+                    alt="Кэт энерджи про 1000 граммов, со вкусом гречки"
+                  />
+                </picture>
               </a>
 
               <div class="card__content">
@@ -306,14 +410,24 @@
           <li class="main-catalog__item main-catalog__item--7">
             <article class="card">
               <a class="card__visual" href="./product.html">
-                <img
-                  class="card__image"
-                  src="/test"
-                  alt="Кэт энерджи про 500 граммов, со вкусом риса"
-                  loading="lazy"
-                  width="30"
-                  height="30"
-                />
+                <picture class="card__picture">
+                  <source
+                    class="card__image"
+                    width="161"
+                    height="172"
+                    media="(min-width: 768px)"
+                    srcset="./images/catalog-7-tablet@1x.png, ./images/catalog-7-tablet@2x.png 2x"
+                    type="image/png"
+                  >
+                  <img
+                    class="card__image"
+                    width="68"
+                    height="86"
+                    src="./images/catalog-7@1x.png"
+                    srcset="./images/catalog-7@2x.png 2x"
+                    alt="Кэт энерджи про 500 граммов, со вкусом риса"
+                  />
+                </picture>
               </a>
               <div class="card__content">
                 <h3 class="card__title">
@@ -464,8 +578,8 @@
 
     <footer class="page-footer">
       <div class="page-wrapper page-footer__wrapper">
-        <a class="page-footer__company-name company-name" href="./index.html">
-          <img class="company-name__image" src="/test" alt="Имя компании" width="30" height="30" />
+        <a class="page-footer__company-name" href="./index.html" aria-label="Название компании">
+          <svg class="company-name" width="128" height="24" role="img"></svg>
         </a>
 
         <ul class="page-footer__socials socials">
