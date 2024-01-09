@@ -5,10 +5,10 @@
     <title>Cat energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="icon" href="./favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon">
-    <link rel="icon" href="./favicons/icon.svg" sizes="32x32" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="./favicons/180.png" sizes="180x180" type="image/png">
-    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="icon" href="/favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/favicons/icon.svg" sizes="32x32" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicons/180.png" sizes="180x180" type="image/png">
+    <link rel="manifest" href="/manifest.webmanifest">
 
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
@@ -113,19 +113,19 @@
         <h2 class="visually-hidden">Диета</h2>
 
         <ul class="diet__list">
-          <li class="diet__item diet__item--1">
+          <li class="diet__item diet__item--slim">
             <svg class="diet__icon" aria-hidden="true" focusable="false" width="30" height="30"></svg>
             <h3 class="diet__title">Похудение</h3>
-            <p class="diet__text diet__text--1">Ваш кот весит больше собаки и&nbsp;почти утратил способность лазить по&nbsp;деревьям? Пора на&nbsp;диету! <span lang="en">Cat Energy Slim</span> поможет вашему питомцу сбросить лишний вес.</p>
+            <p class="diet__text">Ваш кот весит больше собаки и&nbsp;почти утратил способность лазить по&nbsp;деревьям? Пора на&nbsp;диету! <span lang="en">Cat Energy Slim</span> поможет вашему питомцу сбросить лишний вес.</p>
 
             <a class="diet__link" href="./catalog.html">каталог <span lang="en">slim</span>
             </a>
           </li>
 
-          <li class="diet__item diet__item--2">
+          <li class="diet__item diet__item--pro">
             <svg class="diet__icon" aria-hidden="true" focusable="false" width="30" height="30"></svg>
             <h3 class="diet__title">Набор массы</h3>
-            <p class="diet__text diet__text--1">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия <span lang="en">Cat Energy Pro</span> поможет вашему коту нарастить необходимые мышцы!
+            <p class="diet__text">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия <span lang="en">Cat Energy Pro</span> поможет вашему коту нарастить необходимые мышцы!
             </p>
 
             <a class="diet__link" href="./catalog.html">каталог <span lang="en">pro</span></a>
@@ -138,22 +138,22 @@
           <h2 class="steps__heading">Как это работает</h2>
 
           <ul class="steps__list">
-            <li class="steps__item steps__item--1">
+            <li class="steps__item">
               <p class="steps__text">
                 Функциональное питание содержит только полезные питательные вещества.
               </p>
             </li>
-            <li class="steps__item steps__item--2">
+            <li class="steps__item">
               <p class="steps__text">
                 Выпускается в&nbsp;виде порошка, который нужно лишь залить кипятком и&nbsp;готово.
               </p>
             </li>
-            <li class="steps__item steps__item--3">
+            <li class="steps__item">
               <p class="steps__text">
                 Уже через месяц наслаждайтесь изменениями к&nbsp;лучшему вашего питомца!
               </p>
             </li>
-            <li class="steps__item steps__item--4">
+            <li class="steps__item">
               <p class="steps__text"></p>
             </li>
           </ul>
@@ -230,7 +230,6 @@
             </div>
 
             <div class="slider__control">
-              <button class="slider__button slider__button--prev" type="button">было</button>
               <div class="slider__range range">
                 <input
                   class="range__input"
@@ -240,9 +239,8 @@
                   max="100"
                   aria-label="Изменить изображение"
                 />
-                <div class="range__pin"></div>
+                <button class="range__pin" type="button" aria-label="Переместить"></button>
               </div>
-              <button class="slider__button slider__button--next" type="button">стало</button>
             </div>
           </div>
         </div>
