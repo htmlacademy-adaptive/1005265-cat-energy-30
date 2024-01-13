@@ -1,1 +1,12 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
