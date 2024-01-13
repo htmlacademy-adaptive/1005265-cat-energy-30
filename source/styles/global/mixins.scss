@@ -21,7 +21,7 @@
 @mixin h1($color: $darken-color) {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   text-align: center;
@@ -37,7 +37,7 @@
 @mixin h2 {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 36px;
   line-height: 40px;
   text-align: center;
@@ -52,7 +52,7 @@
 @mixin h3 {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
@@ -67,7 +67,7 @@
 @mixin text($size: 14px, $line-height: 18px, $color: $text-color) {
   font-family: "Arial", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: $size;
   line-height: $line-height;
   color: $color;
@@ -81,7 +81,7 @@
 @mixin text-uppercase($size: 16px, $line-height: 16px, $color: $darken-color) {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: $size;
   line-height: $line-height;
   text-align: center;
@@ -92,9 +92,8 @@
 @mixin title {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   color: $darken-color;
 }
-

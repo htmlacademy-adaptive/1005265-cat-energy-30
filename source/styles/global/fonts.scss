@@ -2,7 +2,7 @@
 
 @mixin font-face($family, $url) {
   @font-face {
-    font-family: $name;
+    font-family: $family;
     src: $url;
     font-weight: 400;
     font-style: normal;
@@ -12,12 +12,11 @@
 
 @include font-face(
   "Lato",
-  url("../fonts/lato/Lato-Regular.woff2") format("woff2"),
+  url("../fonts/lato/Lato-Regular.woff2") format("woff2")
   url("../fonts/lato/Lato-Regular.woff") format("woff")
 );
-
 @include font-face(
   "Oswald",
-  url("../fonts/oswald/oswaldregular.woff2") format("woff2"),
+  url("../fonts/oswald/oswaldregular.woff2") format("woff2")
   url("../fonts/oswald/oswaldregular.woff") format("woff")
 )
