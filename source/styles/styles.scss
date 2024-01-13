@@ -1,7 +1,35 @@
 /* GLOBAL */
 @import "./global/variables.scss";
+@import "./global/mixins.scss";
 @import "./global/global.scss";
 @import "./global/fonts.scss";
+@import "./global/visually-hidden";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/page-header.scss";
+@import "./blocks/page-main.scss";
+@import "./blocks/page-footer.scss";
+@import "./blocks/button.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/company-name.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/site-navigation.scss";
+@import "./blocks/map.scss";
+@import "./blocks/socials.scss";
+@import "./blocks/development.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/diet.scss";
+@import "./blocks/steps.scss";
+@import "./blocks/review.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/range.scss";
+@import "./blocks/fieldset.scss";
+@import "./blocks/input.scss";
+@import "./blocks/questionnaire.scss";
+@import "./blocks/radio.scss";
+@import "./blocks/checkbox.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/card.scss";
+@import "./blocks/data.scss";
+@import "./blocks/addition.scss";
