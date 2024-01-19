@@ -9,8 +9,27 @@
 }
 
 .diet__item {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $base;
+  }
+
   &--slim {
-    .diet__icon::before {
+    &::after {
       width: 36px;
       height: 50px;
 
@@ -20,7 +39,7 @@
   }
 
   &--pro {
-    .diet__icon::before {
+    &::after {
       width: 67px;
       height: 28px;
 
@@ -28,30 +47,56 @@
       translate: -15% 46%;
     }
   }
-}
 
-.diet__icon {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: $base-color;
+  @media (min-width: $tablet) {
+    &::before {
+      width: 200px;
+      height: 200px;
+    }
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
+    &--slim {
+      &::after {
+        width: 140px;
+        height: 194px;
+      }
+    }
 
-    background-repeat: no-repeat;
+    &--pro {
+      &::after {
+        width: 268px;
+        height: 112px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &::before {
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim {
+      &::after {
+        width: 70px;
+        height: 97px;
+      }
+    }
+
+    &--pro {
+      &::after {
+        width: 134px;
+        height: 56px;
+      }
+    }
   }
 }
+
 
 .diet__link {
   position: relative;
   display: inline-block;
 
-  color: $darken-color;
+  color: $darken;
   cursor: pointer;
 
   &::after {
@@ -66,7 +111,7 @@
 
     mask-image: url("../../images/icons/stack.svg#icon-arrow");
     mask-repeat: no-repeat;
-    background-color: $darken-color;
+    background-color: $darken;
     transition: 0.3s ease;
   }
 

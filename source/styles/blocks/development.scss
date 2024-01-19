@@ -1,3 +1,40 @@
 .development {
+  display: flex;
+  align-items: center;
+  gap: 23px;
   color: $text-color;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+
+  &:hover,
+  &:focus {
+    .development__logo {
+      background-color: $base;
+      transition: 0.3s ease;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.3s ease;
+
+    .development__logo {
+      background-color: $base;
+    }
+  }
+}
+
+.development__name {
+  color: $darken-6;
+}
+
+.development__logo {
+  min-width: 27px;
+  height: 34px;
+
+  background-color: $text-color-2;
+  mask-repeat: no-repeat;
+  mask-image: url("../../images/icons/stack.svg#logo-development");
+  transition: 0.3s ease;
 }

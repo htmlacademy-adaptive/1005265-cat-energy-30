@@ -1,3 +1,19 @@
 .company-name {
-  color: $text-color;
+  cursor: pointer;
+  color: $darken-3;
+
+  &:visited {
+    color: $darken-3;
+  }
+
+  &--footer {
+    &:hover,
+    &:focus {
+      color: $darken-4;
+    }
+
+    &:active {
+      color: $darken-5;
+    }
+  }
 }

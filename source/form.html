@@ -16,30 +16,43 @@
   <body>
     <header class="page-header">
       <div class="page-wrapper">
-        <a class="logo page-header__logo" href="/">
+        <a class="logo page-header__logo" href="/index.html">
           <picture class="logo__picture">
             <source
               class="logo__image"
+              width="70"
+              height="59"
               media="(min-width: 1440px)"
               srcset="./images/logo-desktop.svg"
               type="image/svg+xml"
             >
             <source
               class="logo__image"
+              width="60"
+              height="50"
               media="(min-width: 768px)"
               srcset="./images/logo-tablet.svg"
               type="image/svg+xml"
             >
             <img
               class="logo__image"
-              src="./images/logo-mobile.svg"
               width="34"
               height="38"
-              alt="Логотип Cat energy: Кот супергерой"
-            >
+              src="./images/logo-mobile.svg"
+              alt="Логотип Cat energy: Кот супергерой">
           </picture>
 
-          <svg class="company-name" width="101" height="18" role="img"></svg>
+          <picture class="company-name">
+            <source
+              class="company-name__image"
+              width="101"
+              height="18"
+              media="(min-width: 1440px)"
+              srcset="./images/logo-text-lighten.svg"
+              type="image/svg+xml"
+            >
+            <img class="company-name__image" width="101" height="18" src="./images/logo-text.svg" alt="Название компании: Cat Energy" />
+          </picture>
         </a>
 
         <div class="page-header__menu menu">
@@ -52,7 +65,7 @@
           <nav class="site-navigation">
             <menu class="site-navigation__list">
               <li class="site-navigation__item">
-                <a class="site-navigation__link" href="./index.html">Главная</a>
+                <a class="site-navigation__link" href="/index.html">Главная</a>
               </li>
               <li class="site-navigation__item">
                 <a class="site-navigation__link" href="./catalog.html">Каталог продукции</a>
@@ -398,8 +411,10 @@
 
     <footer class="page-footer">
       <div class="page-wrapper page-footer__wrapper">
-        <a class="page-footer__company-name company-name" href="./index.html" aria-label="Название компании">
-          <svg class="company-name__image" width="128" height="24" role="img"></svg>
+        <a class="page-footer__company-name company-name company-name--footer" href="/index.html" aria-label="Название компании">
+          <svg class="company-name__image" width="128" height="24" aria-label="Название компании: Cat Energy">
+            <use xlink:href="./images/icons/stack.svg#logo-text"></use>
+          </svg>
         </a>
 
         <ul class="page-footer__socials socials">
