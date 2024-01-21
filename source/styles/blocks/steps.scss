@@ -6,8 +6,7 @@
 
 .steps__list {
   @include list;
-  display: flex;;
-
+  display: flex;
   counter-reset: steps 0;
 }
 
@@ -24,7 +23,7 @@
     height: 80px;
 
     background-color: $base;
-    background-repeat: no-repeat;;
+    background-repeat: no-repeat;
     background-position: center;
   }
 
@@ -39,7 +38,7 @@
   }
 
   &--replace::before {
-    background-color: 25px 30px;
+    background-size: 25px 30px;
     background-image: url("../../images/icons/stack.svg#icon-eat");
   }
 
