@@ -20,25 +20,39 @@
           <picture class="logo__picture">
             <source
               class="logo__image"
+              width="70"
+              height="59"
               media="(min-width: 1440px)"
               srcset="./images/logo-desktop.svg"
               type="image/svg+xml"
             >
             <source
               class="logo__image"
+              width="60"
+              height="50"
               media="(min-width: 768px)"
               srcset="./images/logo-tablet.svg"
               type="image/svg+xml"
             >
             <img
               class="logo__image"
-              src="./images/logo-mobile.svg"
               width="34"
               height="38"
+              src="./images/logo-mobile.svg"
               alt="Логотип Cat energy: Кот супергерой">
           </picture>
 
-          <svg class="company-name" width="101" height="18" role="img"></svg>
+          <picture class="company-name">
+            <source
+              class="company-name__image"
+              width="101"
+              height="18"
+              media="(min-width: 1440px)"
+              srcset="./images/logo-text-lighten.svg"
+              type="image/svg+xml"
+            >
+            <img class="company-name__image" width="101" height="18" src="./images/logo-text.svg" alt="Название компании: Cat Energy" />
+          </picture>
         </a>
 
         <div class="page-header__menu menu">
@@ -114,7 +128,6 @@
 
         <ul class="diet__list">
           <li class="diet__item diet__item--slim">
-            <svg class="diet__icon" aria-hidden="true" focusable="false" width="30" height="30"></svg>
             <h3 class="diet__title">Похудение</h3>
             <p class="diet__text">Ваш кот весит больше собаки и&nbsp;почти утратил способность лазить по&nbsp;деревьям? Пора на&nbsp;диету! <span lang="en">Cat Energy Slim</span> поможет вашему питомцу сбросить лишний вес.</p>
 
@@ -123,7 +136,6 @@
           </li>
 
           <li class="diet__item diet__item--pro">
-            <svg class="diet__icon" aria-hidden="true" focusable="false" width="30" height="30"></svg>
             <h3 class="diet__title">Набор массы</h3>
             <p class="diet__text">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия <span lang="en">Cat Energy Pro</span> поможет вашему коту нарастить необходимые мышцы!
             </p>
@@ -138,23 +150,25 @@
           <h2 class="steps__heading">Как это работает</h2>
 
           <ul class="steps__list">
-            <li class="steps__item">
+            <li class="steps__item steps__item--nutrition">
               <p class="steps__text">
                 Функциональное питание содержит только полезные питательные вещества.
               </p>
             </li>
-            <li class="steps__item">
+            <li class="steps__item steps__item--available">
               <p class="steps__text">
                 Выпускается в&nbsp;виде порошка, который нужно лишь залить кипятком и&nbsp;готово.
               </p>
             </li>
-            <li class="steps__item">
+            <li class="steps__item steps__item--replace">
+              <p class="steps__text">
+                Замените один-два приема обычной еды на&nbsp;наше функциональное питание.
+              </p>
+            </li>
+            <li class="steps__item steps__item--changes">
               <p class="steps__text">
                 Уже через месяц наслаждайтесь изменениями к&nbsp;лучшему вашего питомца!
               </p>
-            </li>
-            <li class="steps__item">
-              <p class="steps__text"></p>
             </li>
           </ul>
         </div>
@@ -195,7 +209,7 @@
                   width="560"
                   height="512"
                   media="(min-width: 768px)"
-                  srcset="./images/slide-after-tablet@1x.png, ./images/slider-after-tablet@2x.png 2x"
+                  srcset="./images/slide-after-tablet@1x.png, ./images/slide-after-tablet@2x.png 2x"
                   type="image/png"
                 >
                 <img
@@ -215,7 +229,7 @@
                   width="560"
                   height="512"
                   media="(min-width: 768px)"
-                  srcset="./images/slide-before-tablet@1x.png, ./images/slider-before-tablet@2x.png 2x"
+                  srcset="./images/slide-before-tablet@1x.png, ./images/slide-before-tablet@2x.png 2x"
                   type="image/png"
                 >
                 <img
@@ -279,8 +293,10 @@
 
     <footer class="page-footer">
       <div class="page-wrapper page-footer__wrapper">
-        <a class="page-footer__company-name company-name" href="/" aria-label="Название компании">
-          <svg class="company-name__image" width="128" height="24" role="img"></svg>
+        <a class="page-footer__company-name company-name company-name--footer" href="/index.html" aria-label="Название компании: Cat Energy">
+          <svg class="company-name__image" width="128" height="24">
+            <use href="./images/icons/stack.svg#logo-text"></use>
+          </svg>
         </a>
 
         <ul class="page-footer__socials socials">
@@ -313,24 +329,23 @@
           </li>
         </ul>
 
-        <div class="page-footer__development development">
-          <a
+        <a
+          class="page-footer__development development"
+          href="https://htmlacademy.ru/intensive/adaptive"
+          target="_blank"
+          lang="en"
+          rel="noreferrer noopener"
+        >
+          <p
             class="development__name"
-            href="https://htmlacademy.ru/intensive/adaptive"
-            target="_blank"
             lang="en"
-            rel="noreferrer noopener"
           >
             HTML Academy
-          </a>
-          <a
-            class="development__logo"
-            href="https://htmlacademy.ru/intensive/adaptive"
-            target="_blank"
-            aria-label="Сайт HTML Academy"
-            rel="noreferrer noopener"
-          ></a>
-        </div>
+          </p>
+          <svg class="development__logo" width="27" height="34">
+            <use href="./images/icons/stack.svg#logo-development" />
+          </svg>
+        </a>
       </div>
     </footer>
   </body>

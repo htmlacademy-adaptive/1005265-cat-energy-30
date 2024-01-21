@@ -1,3 +1,54 @@
 .socials {
-  color: $text-color;
+  @include list;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 20px;
+  padding-bottom: 19px;
+
+
+  @media (min-width: $tablet) {
+    margin-left: 25px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 5px;
+  }
+}
+
+.socials__link {
+  display: block;
+  width: 28px;
+  height: 22px;
+  background-color: $text-color-2;
+  mask-repeat: no-repeat;
+  transition: 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $base;
+    transition: 0.3s ease;
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: $base;
+    transition: 0.3s ease;
+  }
+
+  &--vkontakte {
+    mask-image: url("../../images/icons/stack.svg#icon-vkontakte");
+  }
+
+  &--youtube {
+    mask-image: url("../../images/icons/stack.svg#icon-youtube");
+  }
+
+  &--telegramm {
+    mask-image: url("../../images/icons/stack.svg#icon-telegram");
+  }
 }

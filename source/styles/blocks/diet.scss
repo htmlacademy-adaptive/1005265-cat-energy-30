@@ -1,3 +1,127 @@
 .diet {
   color: $text-color;
 }
+
+.diet__list {
+  @include list;
+
+  display: flex;
+}
+
+.diet__item {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $base;
+  }
+
+  &--slim {
+    &::after {
+      width: 36px;
+      height: 50px;
+
+      background-image: url("../../images/icons/stack.svg#cat-slim");
+      translate: 20% -6%;
+    }
+  }
+
+  &--pro {
+    &::after {
+      width: 67px;
+      height: 28px;
+
+      background-image: url("../../images/icons/stack.svg#cat-pro");
+      translate: -15% 46%;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    &::before {
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim {
+      &::after {
+        width: 140px;
+        height: 194px;
+      }
+    }
+
+    &--pro {
+      &::after {
+        width: 268px;
+        height: 112px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &::before {
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim {
+      &::after {
+        width: 70px;
+        height: 97px;
+      }
+    }
+
+    &--pro {
+      &::after {
+        width: 134px;
+        height: 56px;
+      }
+    }
+  }
+}
+
+
+.diet__link {
+  position: relative;
+  display: inline-block;
+
+  color: $darken;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    translate: 0 -50%;
+
+    width: 32px;
+    height: 10px;
+    margin-left: 15px;
+
+    mask-image: url("../../images/icons/stack.svg#icon-arrow");
+    mask-repeat: no-repeat;
+    background-color: $darken;
+    transition: 0.3s ease;
+  }
+
+  &:hover::after {
+    mask-image: url("../../images/icons/stack.svg#icon-arrow-long");
+    transition: 0.3s ease;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.3s ease;
+  }
+}

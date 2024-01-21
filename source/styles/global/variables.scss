@@ -1,16 +1,19 @@
 /* здесь используйте глобальные переменные */
-$base-color: #68b738;
-$base-color-darken: #5eaa2f;
-$base-color-darken-2: #63a63c;
+$base: #68b738;
+$base-darken: #5eaa2f;
+$base-darken-2: #63a63c;
 $base-card: #f2f2f2;
 
-$lighten-color: #ffffff;
-$lighten-color-2: rgba(255, 255, 255, 0.6);
-$lighten-color-3: rgba(255, 255, 255, 0.3);
+$lighten: #ffffff;
+$lighten-2: rgba(255, 255, 255, 0.6);
+$lighten-3: rgba(255, 255, 255, 0.3);
 
-$darken-color: #000000;
-$darken-2-color: #222222;
-$darken-3-color: #111111;
+$darken: #000000;
+$darken-2: #222222;
+$darken-3: #111111;
+$darken-4: #3e3e3e;
+$darken-5: #6b6b6b;
+$darken-6: #444444;
 
 $grey: #cdcdcd;
 $grey-2: #e6e6e6;
@@ -21,12 +24,14 @@ $grey-6: #dcdcdc;
 
 $text-color: #444444;
 $text-color-2: #666666;
+// text-primary
+// text-secondary
+// text-
 
 $additional-color: #d9d9d9;
 $background-color: #eaeaea;
 $error: #ff8282;
 
 $mobile: 320px;
-$mobile-only: 767px;
 $tablet: 768px;
 $desktop: 1440px;

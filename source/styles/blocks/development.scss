@@ -1,3 +1,38 @@
 .development {
+  display: inline-flex;
+  align-items: center;
+  gap: 23px;
   color: $text-color;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+
+  &:hover,
+  &:focus {
+    .development__logo {
+      color: $base;
+      transition: 0.3s ease;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.3s ease;
+
+    .development__logo {
+      color: $base;
+    }
+  }
+}
+
+.development__name {
+  color: $darken-6;
+}
+
+.development__logo {
+  min-width: 27px;
+  height: 34px;
+
+  color: $text-color-2;
+  transition: 0.3s ease;
 }
