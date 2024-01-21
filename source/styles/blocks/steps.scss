@@ -1,3 +1,59 @@
 .steps {
-  color: $text-color;
+  margin-bottom: 39px;
+  background-color: $lighten;
+  color: $darken;
+}
+
+.steps__list {
+  @include list;
+  display: flex;;
+
+  counter-reset: steps 0;
+}
+
+.steps__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-increment: steps 1;
+
+  &::before {
+    display: block;
+    content: "";
+    min-width: 80px;
+    height: 80px;
+
+    background-color: $base;
+    background-repeat: no-repeat;;
+    background-position: center;
+  }
+
+  &--nutrition::before {
+    background-size: 30px 32px;
+    background-image: url("../../images/icons/stack.svg#icon-leaf");
+  }
+
+  &--available::before {
+    background-size: 27px 32px;
+    background-image: url("../../images/icons/stack.svg#icon-tub");
+  }
+
+  &--replace::before {
+    background-color: 25px 30px;
+    background-image: url("../../images/icons/stack.svg#icon-eat");
+  }
+
+  &--changes::before {
+    background-size: 32px 33px;
+    background-image: url("../../images/icons/stack.svg#icon-alarm");
+  }
+
+  &::after {
+    position: absolute;
+    content: counter(steps);
+    top: 0;
+    right: 0;
+
+    @include text-counter;
+  }
 }
