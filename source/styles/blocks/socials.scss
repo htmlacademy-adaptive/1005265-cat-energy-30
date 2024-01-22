@@ -24,12 +24,13 @@
   display: block;
   width: 28px;
   height: 22px;
-  background-color: $text-color-2;
+  background-color: $text-secondary;
   mask-repeat: no-repeat;
   transition: 0.3s ease;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:focus-visible {
     background-color: $base;
     transition: 0.3s ease;
   }

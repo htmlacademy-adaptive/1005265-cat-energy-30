@@ -11,4 +11,25 @@
     opacity: 0.6;
     transition: 0.3s ease;
   }
+
+  @media (min-width: $tablet) {
+    max-inline-size: 174px;
+  }
+
+  @media (min-width: $desktop) {
+    max-inline-size: 202px;
+  }
+}
+
+.logo__image {
+  @media (min-width: $tablet) {
+    margin-inline-end: 0;
+    max-inline-size: 174px;
+    block-size: 52px;
+  }
+
+  @media (min-width: $desktop) {
+    max-inline-size: 202px;
+    block-size: 59px;
+  }
 }

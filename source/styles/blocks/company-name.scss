@@ -10,7 +10,8 @@
 
   &--footer {
     &:hover,
-    &:focus {
+    &:focus,
+    &:focus-visible {
       color: $darken-4;
       transition: 0.3s ease;
     }

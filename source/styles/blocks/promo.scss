@@ -1,10 +1,13 @@
 .promo {
-  min-height: 302px;
+  min-block-size: 302px;
   box-sizing: border-box;
-  padding-top: 27px;
-  margin-bottom: 200px;
+
+  padding-block-start: 27px;
+  margin-block-end: 200px;
 
   background-color: $base-darken-2;
+  // @mixin adaptive-bg($image, $ext: ".jpg") {
+  // @include adaptive-bg();
   background-image:
     linear-gradient(to right, rgba($base, 0.85) 0%, rgba($base, 0.85) 100%),
     image-set(
@@ -17,17 +20,18 @@
   color: $lighten;
 
   @media (min-width: $tablet) {
-    min-height: 610px;
-    padding-top: 0;
+    min-block-size: 610px;
+    padding-block-start: 0;
+
     background-image: none;
     background-color: $lighten;
   }
 
   @media (min-width: $desktop) {
-    min-height: 707px;
-    margin-top: -200px;
-    padding-top: 150px;
-    margin-bottom: 82px;
+    min-block-size: 707px;
+    margin-block-start: -200px;
+    margin-block-end: 82px;
+    padding-block-start: 150px;
 
     background-image:
       linear-gradient(to right, $lighten 59%, rgba($base, 0.85) 59%, rgba($base, 0.85) 100%),
@@ -39,5 +43,115 @@
     background-repeat: no-repeat;
     background-position: center, top 10px right -12px;
     background-size: contain;
+  }
+}
+
+.promo__wrapper {
+  position: relative;
+  @include container;
+}
+
+.promo__content {
+  @media (min-width: $tablet) {
+    position: relative;
+    z-index: 2;
+    max-inline-size: 414px;
+    margin-inline-start: 87px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-inline-start: 80px;
+  }
+}
+
+.promo__heading {
+  @include h1($lighten);
+
+  max-inline-size: 400px;
+  margin-block-start: 0;
+  margin-inline: auto;
+  margin-block-end: 25px;
+
+  @media (min-width: $tablet) {
+    max-inline-size: 100%;
+    margin-block-end: 41px;
+    color: $darken;
+  }
+
+  @media (min-width: $desktop) {
+    margin-block-start: 87px;
+  }
+}
+
+.promo__slogan {
+  @include text-uppercase(14px, 14px, $lighten);
+
+  @media (min-width: $tablet) {
+    @include text-uppercase(20px, 20px);
+
+    margin-block-end: 49px;
+    text-align: start;
+    color: $darken;
+  }
+
+
+  @media (min-width: $desktop) {
+    margin-block-end: 51px;
+  }
+}
+
+.promo___button {
+  position: relative;
+  inset-block-start: 287px;
+
+  inline-size: 100%;
+  padding-block: 11px;
+  padding-inline: 26px;
+  margin-block-end: 22px;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet) {
+    inset-block-start: -2px;
+    inset-block-end: 5px;
+
+    inline-size: 244px;
+    padding-block: 17px;
+    padding-inline: 26px;
+
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  @media (min-width: $desktop) {
+    inset-block-start: 0;
+    inset-block-end: 0;
+  }
+}
+
+.promo__image {
+  position: absolute;
+  inset-block-start: 140px;
+  inset-inline-start: 50%;
+
+  inline-size: 280px;
+  block-size: 270px;
+  translate: -50%;
+
+  @media (min-width: $tablet) {
+    inset-block-start: 197px;
+    z-index: 1;
+
+    inline-size: 709px;
+    block-size: 609px;
+  }
+
+  @media (min-width: $desktop) {
+    inset-block-start: 5px;
+    inset-inline-start: 58%;
+
+    inline-size: 559px;
+    block-size: 499px;
   }
 }

@@ -1,3 +1,75 @@
 .menu {
-  color: $text-color;
+  display: block;
+
+  &--closed .menu__control {
+    inset-block-start: 19px;
+    inset-block-end: 19px;
+  }
+
+  &--closed .menu__navigation {
+    block-size: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
+  }
+
+  &--nojs .menu__navigation {
+    block-size: auto;
+    overflow: visible;
+    transition: all 0.5s linear;
+  }
+}
+
+.menu__control {
+  position: absolute;
+  inset-block-start: 19px;
+  inset-inline-end: 20px;
+
+  display: flex;
+  inline-size: 26px;
+  block-size: 26px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.menu__close {
+  display: none;
+  inline-size: 18px;
+  block-size: 18px;
+  margin: auto;
+
+  &.active {
+    display: block;
+  }
+}
+
+.menu__open {
+  display: none;
+  inline-size: 24px;
+  block-size: 16px;
+  margin: auto;
+
+  &.active {
+    display: block;
+  }
+}
+
+.menu__navigation {
+  block-size: auto;
+  overflow: visible;
+  transition: all 0.5s linear;
+
+  @media (min-width: $tablet) {
+    block-size: auto;
+    overflow: visible;
+    transition: all 0.5s linear;
+  }
 }

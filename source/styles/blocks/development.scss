@@ -2,13 +2,14 @@
   display: inline-flex;
   align-items: center;
   gap: 23px;
-  color: $text-color;
+  color: $text-primary;
   text-decoration: none;
 
   transition: 0.3s ease;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:focus-visible {
     .development__logo {
       color: $base;
       transition: 0.3s ease;
@@ -33,6 +34,6 @@
   min-width: 27px;
   height: 34px;
 
-  color: $text-color-2;
+  color: $text-secondary;
   transition: 0.3s ease;
 }

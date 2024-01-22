@@ -1,14 +1,16 @@
 @mixin container {
-  padding: 0 20px;
-  margin: 0 auto;
+  padding-block: 0;
+  padding-inline: 20px;
+  margin-block: 0;
+  margin-inline: auto;
 
   @media (min-width: $tablet) {
-    padding: 0 30px;
+    padding-inline: 30px;
   }
 
   @media (min-width: $desktop) {
-    max-width: 1220px;
-    padding: 0 110px;
+    max-inline-size: 1220px;
+    padding-inline: 110px;
   }
 }
 
@@ -29,8 +31,8 @@
   list-style: none;
 }
 
-@mixin h1($color: $darken-color) {
-  font-family: "Oswald", "Arial", sans-serif;
+@mixin h1($color: $darken) {
+  font-family: $oswald;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -41,42 +43,42 @@
   @media (min-width: $tablet) {
     font-size: 60px;
     line-height: 60px;
-    text-align: left;
+    text-align: start;
   }
 }
 
 @mixin h2 {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $oswald;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
   text-align: center;
-  color: $darken-color;
+  color: $darken;
 
   @media (min-width: $tablet) {
     font-size: 60px;
-    line-height: 60px;
+    line-height: 1;
   }
 }
 
 @mixin h3 {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $oswald;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  color: $darken-color;
+  color: $darken;
 
   @media (min-width: $tablet) {
     font-size: 36px;
-    line-height: 36px;
+    line-height: 1;
   }
 }
 
-@mixin text($size: 14px, $line-height: 18px, $color: $text-color) {
-  font-family: "Arial", sans-serif;
+@mixin text($size: 14px, $line-height: 18px, $color: $text-primary) {
+  font-family: $lato;
   font-style: normal;
   font-weight: 400;
   font-size: $size;
@@ -89,8 +91,8 @@
   }
 }
 
-@mixin text-uppercase($size: 16px, $line-height: 16px, $color: $darken-color) {
-  font-family: "Oswald", "Arial", sans-serif;
+@mixin text-uppercase($size: 16px, $line-height: 16px, $color: $darken) {
+  font-family: $oswald;
   font-style: normal;
   font-weight: 400;
   font-size: $size;
@@ -101,17 +103,17 @@
 }
 
 @mixin title {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $oswald;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
-  color: $darken-color;
+  color: $darken;
 }
 
 @mixin text-counter {
   text-align: center;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $oswald;
   font-size: 280px;
   font-style: normal;
   font-weight: 400;
