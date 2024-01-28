@@ -1,14 +1,22 @@
 .map {
-  min-height: 362px;
+  max-block-size: 362px;
 
   @include adaptive-bg("../../../images/map-bg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: $grey;
+
+  @media (min-width: $tablet) {
+    max-block-size: 400px;
+  }
 }
 
 .map__frame {
-  width: 100%;
+  inline-size: 100%;
   border: none;
+
+  @media (min-width: $tablet) {
+    min-block-size: 400px;
+  }
 }

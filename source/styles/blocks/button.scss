@@ -1,3 +1,44 @@
 .button {
-  color: $text-color;
+  width: 244px;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 10px 26px;
+  border: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Oswald", "Arial", sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $lighten;
+  background-color: $base;
+  transition: all 0.7s linear;
+
+  &:hover {
+    background-color: $base-darken;
+    transition: all 0.7s linear;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    background-color: $base-darken;
+    outline: 2px solid $darken;
+    transition: all 0.7s linear;
+  }
+
+  &:active {
+    background-color: $base-darken;
+    color: $lighten-3;
+    transition: all 0.7s linear;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

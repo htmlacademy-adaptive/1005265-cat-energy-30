@@ -1,3 +1,64 @@
 .page-footer {
-  color: $text-color;
+  background-color: $base-card;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include container;
+  padding-block: 40px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-block: 55px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-block: 66px;
+  }
+}
+
+.page-footer__company-name {
+  inline-size: 100%;
+  padding-block-end: 20px;
+  margin-block-end: 20px;
+  border-block-end: 1px solid $additional-color;
+
+  @media (min-width: $tablet) {
+    inline-size: auto;
+    padding-block-end: 0;
+    margin-block-end: 0;
+    border-block-end: none;
+  }
+}
+
+.page-footer__socials {
+  inline-size: 100%;
+  padding-block-end: 20px;
+  margin-block-end: 20px;
+  border-block-end: 1px solid $additional-color;
+
+  @media (min-width: $tablet) {
+    inline-size: auto;
+    padding-block-end: 0;
+    margin-block-end: 0;
+    margin-inline-start: 36px;
+    border-block-end: none;
+  }
+
+  @media (min-width: $desktop) {
+    margin-inline-start: 20px;
+  }
+}
+
+.page-footer__development {
+  inline-size: 100%;
+
+  @media (min-width: $tablet) {
+    inline-size: auto;
+  }
 }

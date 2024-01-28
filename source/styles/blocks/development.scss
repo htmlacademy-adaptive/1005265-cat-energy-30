@@ -1,14 +1,16 @@
 .development {
   display: inline-flex;
+  justify-content: space-between;
   align-items: center;
   gap: 23px;
-  color: $text-color;
+  color: $text-primary;
   text-decoration: none;
 
   transition: 0.3s ease;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:focus-visible {
     .development__logo {
       color: $base;
       transition: 0.3s ease;
@@ -26,13 +28,20 @@
 }
 
 .development__name {
+  margin: 0;
   color: $darken-6;
+  @include text;
 }
 
 .development__logo {
-  min-width: 27px;
-  height: 34px;
+  min-inline-size: 27px;
+  block-size: 34px;
 
-  color: $text-color-2;
+  color: $text-secondary;
   transition: 0.3s ease;
+
+  @media (min-width: $tablet) {
+    padding-block-start: 2px;
+    padding-block-end: 1px;
+  }
 }

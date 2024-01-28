@@ -1,3 +1,64 @@
 .input {
-  color: $text-color;
+  margin: 0;
+  padding-block-start: 12px;
+  padding-inline: 15px;
+  padding-block-end: 13px;
+  border: 1px solid $grey-3;
+
+  font-size: inherit;
+  line-height: inherit;
+  color: $text-primary;
+  text-align: start;
+  transition: 0.3s ease;
+
+  &::placeholder {
+    color: $text-primary;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    border-color: $grey;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus,
+  &:active {
+    transition: 0.3s ease;
+    padding: 12px 14px;
+    border: 2px solid $text-primary;
+  }
+
+  &--error {
+    transition: 0.3s ease;
+    padding: 12px 14px;
+    border: 2px solid $error;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &[type="number"] {
+    appearance: textfield;
+  }
+
+  @media (min-width: $tablet) {
+    padding-block: 10px;
+    padding-inline: 19px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &:focus,
+    &:active {
+      padding-block: 9px;
+      padding-inline: 18px;
+    }
+  }
 }

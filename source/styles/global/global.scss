@@ -1,4 +1,10 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее*/
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;

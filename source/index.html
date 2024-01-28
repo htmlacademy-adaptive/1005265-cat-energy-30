@@ -14,8 +14,8 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="page-header">
-      <div class="page-wrapper">
+    <header class="page-header page-header--index">
+      <div class="page-header__wrapper">
         <a class="logo page-header__logo" href="/">
           <picture class="logo__picture">
             <source
@@ -45,7 +45,7 @@
           <picture class="company-name">
             <source
               class="company-name__image"
-              width="101"
+              width="118"
               height="18"
               media="(min-width: 1440px)"
               srcset="./images/logo-text-lighten.svg"
@@ -55,14 +55,14 @@
           </picture>
         </a>
 
-        <div class="page-header__menu menu">
+        <div class="page-header__menu menu menu--closed menu--nojs">
           <button
             class="menu__control"
             type="button"
             aria-label="Закрыть меню"
           ></button>
 
-          <nav class="site-navigation">
+          <nav class="site-navigation menu__navigation">
             <menu class="site-navigation__list">
               <li class="site-navigation__item site-navigation__item--current">
                 <a class="site-navigation__link" href="/">Главная</a>
@@ -91,35 +91,35 @@
             <p class="promo__slogan">Занялся собой? Займись котом!</p>
             <a class="promo__button button" href="./form.html">подобрать программу</a>
           </div>
-        </div>
 
-        <div class="promo__visual">
-          <picture class="promo__picture">
-            <source
-              class="promo__image"
-              width="552"
-              height="499"
-              media="(min-width: 1440px)"
-              srcset="./images/promo-desktop@1x.png, ./images/promo-desktop@2x.png 2x"
-              type="image/png"
-            >
-            <source
-              class="promo__image"
-              width="709"
-              height="609"
-              media="(min-width: 768px)"
-              srcset="./images/promo-tablet@1x.png, ./images/promo-tablet@2x.png 2x"
-              type="image/png"
-            >
-            <img
-              class="promo__image"
-              width="280"
-              height="270"
-              src="./images/promo@1x.png"
-              srcset="./images/promo@2x.png 2x"
-              alt="Корм Кэт энерджи Про со вкусом курицы: 500 грамм"
-            />
-          </picture>
+          <div class="promo__visual">
+            <picture class="promo__picture">
+              <source
+                class="promo__image"
+                width="552"
+                height="499"
+                media="(min-width: 1440px)"
+                srcset="./images/promo-desktop@1x.png, ./images/promo-desktop@2x.png 2x"
+                type="image/png"
+              >
+              <source
+                class="promo__image"
+                width="709"
+                height="609"
+                media="(min-width: 768px)"
+                srcset="./images/promo-tablet@1x.png, ./images/promo-tablet@2x.png 2x"
+                type="image/png"
+              >
+              <img
+                class="promo__image"
+                width="280"
+                height="270"
+                src="./images/promo@1x.png"
+                srcset="./images/promo@2x.png 2x"
+                alt="Корм Кэт энерджи Про со вкусом курицы: 500 грамм"
+              />
+            </picture>
+          </div>
         </div>
       </section>
 
@@ -266,11 +266,11 @@
         <div class="contacts__wrapper">
           <div class="contacts__inner">
             <p class="contacts__invite">
-              приглашаем к сотрудничеству дилеров!
+              приглашаем к&nbsp;сотрудничеству дилеров!
             </p>
             <address class="contacts__address">
               ул. Большая Конюшенная, д. 19/8
-              <span class="contacts__city">Санкт-Петербург</span>
+              <p class="contacts__city">Санкт-Петербург</p>
             </address>
           </div>
         </div>

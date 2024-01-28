@@ -1,37 +1,69 @@
 .diet {
-  color: $text-color;
+  @include container;
+
+  margin-block-end: 27px;
+
+  @media (min-inline-size: $tablet) {
+    margin-block-end: 45px;
+  }
+
+  @media (min-inline-size: $desktop) {
+    margin-block-end: 43px;
+  }
 }
 
 .diet__list {
   @include list;
 
-  display: flex;
+  @media (min-width: $desktop) {
+    display: flex;
+    gap: 80px;
+  }
 }
 
 .diet__item {
   position: relative;
+  margin-block-end: 20px;
+  padding-inline: 20px;
+  padding-block-start: 19px;
+  padding-block-end: 18px;
+
+  background-color: $base-card;
+  color: $text-primary;
+
+  @media (min-inline-size: $tablet) {
+    box-sizing: border-box;
+    margin-block-end: 30px;
+    padding-block-start: 77px;
+    padding-inline: 52px;
+    padding-block-end: 52px;
+  }
+
+  @media (min-inline-size: $desktop) {
+    inline-size: 570px;
+  }
 
   &::before,
   &::after {
     position: absolute;
     content: "";
-    top: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
 
     background-repeat: no-repeat;
   }
 
   &::before {
-    width: 50px;
-    height: 50px;
+    inline-size: 50px;
+    block-size: 50px;
     border-radius: 50%;
     background-color: $base;
   }
 
   &--slim {
     &::after {
-      width: 36px;
-      height: 50px;
+      inline-size: 36px;
+      block-size: 50px;
 
       background-image: url("../../images/icons/stack.svg#cat-slim");
       translate: 20% -6%;
@@ -40,52 +72,52 @@
 
   &--pro {
     &::after {
-      width: 67px;
-      height: 28px;
+      inline-size: 67px;
+      block-size: 28px;
 
       background-image: url("../../images/icons/stack.svg#cat-pro");
       translate: -15% 46%;
     }
   }
 
-  @media (min-width: $tablet) {
+  @media (min-inline-size: $tablet) {
     &::before {
-      width: 200px;
-      height: 200px;
+      inline-size: 200px;
+      block-size: 200px;
     }
 
     &--slim {
       &::after {
-        width: 140px;
-        height: 194px;
+        inline-size: 140px;
+        block-size: 194px;
       }
     }
 
     &--pro {
       &::after {
-        width: 268px;
-        height: 112px;
+        inline-size: 268px;
+        block-size: 112px;
       }
     }
   }
 
-  @media (min-width: $desktop) {
+  @media (min-inline-size: $desktop) {
     &::before {
-      width: 100px;
-      height: 100px;
+      inline-size: 100px;
+      block-size: 100px;
     }
 
     &--slim {
       &::after {
-        width: 70px;
-        height: 97px;
+        inline-size: 70px;
+        block-size: 97px;
       }
     }
 
     &--pro {
       &::after {
-        width: 134px;
-        height: 56px;
+        inline-size: 134px;
+        block-size: 56px;
       }
     }
   }
@@ -102,12 +134,12 @@
   &::after {
     position: absolute;
     content: "";
-    top: 50%;
+    inset-block-start: 50%;
     translate: 0 -50%;
 
-    width: 32px;
-    height: 10px;
-    margin-left: 15px;
+    inline-size: 32px;
+    block-size: 10px;
+    margin-inline-start: 15px;
 
     mask-image: url("../../images/icons/stack.svg#icon-arrow");
     mask-repeat: no-repeat;
@@ -125,3 +157,78 @@
     transition: 0.3s ease;
   }
 }
+
+.diet__title {
+  @include h3;
+
+  margin-block-start: 10px;
+  margin-block-end: 29px;
+  margin-inline-start: 72px;
+
+  @media (min-width: $tablet) {
+    margin-block-start: 0;
+    margin-block-end: 24px;
+    margin-inline-start: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-inline-start: 162px;
+    margin-block-end: 75px;
+  }
+}
+
+.diet__text {
+  @include text;
+
+  margin-block-end: 23px;
+
+  @media (min-width: $tablet) {
+    max-inline-size: 342px;
+    color: $darken;
+  }
+
+  @media (min-width: $desktop) {
+    max-inline-size: 100%;
+  }
+}
+
+.diet__link {
+  @include text-uppercase;
+
+  position: relative;
+  display: block;
+
+  max-inline-size: 134px;
+  padding-block-start: 19px;
+  padding-block-end: 4px;
+  text-align: start;
+
+  text-decoration: none;
+  transition: all 0.7s linear;
+
+  &:hover {
+    text-decoration: none;
+    transition: all 0.7s linear;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: all 0.7s linear;
+  }
+
+  @media (min-width: $tablet) {
+    @include text-uppercase(20px, 30px);
+
+    max-inline-size: 165px;
+    margin-block-start: 48px;
+    padding-block-start: 4px;
+    text-align: start;
+  }
+
+  @media (min-width: $desktop) {
+    max-inline-size: 168px;
+    margin-block-start: 0;
+  }
+}
+

@@ -1,3 +1,15 @@
 .fieldset {
-  color: $text-color;
+  padding: 0;
+  margin: 0;
+  border: none;
+  accent-color: $base;
+
+  @media (min-width: $tablet) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.fieldset__legend {
+  padding: 0;
 }
