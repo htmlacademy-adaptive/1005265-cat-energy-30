@@ -4,17 +4,38 @@
   color: $darken;
 }
 
+.steps__wrapper {
+  @include container;
+}
+
 .steps__list {
   @include list;
   display: flex;
+  gap: 20px;
   counter-reset: steps 0;
+
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
 }
 
 .steps__item {
   position: relative;
   display: flex;
+  gap: 20px;
+  align-items: center;
   justify-content: space-between;
   counter-increment: steps 1;
+
+  @media (min-width: $tablet) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
   &::before {
     display: block;
@@ -47,12 +68,19 @@
     background-image: url("../../images/icons/stack.svg#icon-alarm");
   }
 
-  &::after {
-    position: absolute;
-    content: counter(steps);
-    top: 0;
-    right: 0;
+  @media (min-width: $tablet) {
+    &::after {
+      position: absolute;
+      content: counter(steps);
+      top: 0;
+      right: 0;
 
-    @include text-counter;
+      @include text-counter;
+    }
   }
+}
+
+.steps__text {
+  margin: 0;
+  @include text;
 }

@@ -1,3 +1,83 @@
 .contacts {
-  color: $text-primary;
+  position: relative;
+  background-color: $lighten;
+
+  &--gray {
+    background-color: $base-card;
+  }
+}
+
+.contacts__wrapper {
+  @include container;
+
+  padding-block: 26px;
+
+  @media (min-width: $tablet) {
+    padding-block: 61px;
+    @include container-2;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
+}
+
+.contacts__inner {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    inset: 0;
+    inset-block-end: auto;
+    max-inline-size: 565px;
+
+    margin-inline-start: auto;
+    margin-inline-end: 53.1vw;
+    margin-block-start: 95px;
+
+    padding-block: 60px;
+    padding-inline-start: 80px;
+    padding-inline-end: 78px;
+    box-sizing: border-box;
+
+    background-color: $lighten;
+  }
+}
+
+.contacts__invite {
+  inline-size: min(50%, 163px);
+  margin: 0;
+
+  @include text-uppercase(16px, 1.25, $darken-3);
+  text-align: start;
+
+  @media (min-width: $tablet) {
+    @include text-uppercase(20px, 1.3, $darken-3);
+    text-align: start;
+  }
+}
+
+.contacts__address {
+  inline-size: min(50%, 157px);
+  margin: 0;
+  @include text(14px, 20px);
+  font-style: normal;
+
+  @media (min-width: $tablet) {
+    @include text(16px, 20px);
+    text-align: end;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: start;
+  }
+}
+
+.contacts__city {
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    margin-block-start: 20px;
+  }
 }

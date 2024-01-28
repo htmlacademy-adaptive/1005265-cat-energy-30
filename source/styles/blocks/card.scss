@@ -1,3 +1,251 @@
 .card {
-  color: $text-primary;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding-block-start: 18px;
+  padding-block-end: 25px;
+  border-block-start: 1px solid $grey-5;
+
+  &:last-child {
+    border-block-end: 1px solid $grey-5;
+  }
+
+  &--load {
+    position: relative;
+    padding-block-start: 77px;
+  }
+
+  &--load::before {
+    position: absolute;
+    content: "";
+    inset-block-start: 25px;
+    inset-inline-start: 50%;
+    inline-size: 2px;
+    block-size: 30px;
+    background-color: $grey-4;
+  }
+
+  &--load::after {
+    position: absolute;
+    content: "";
+    inset-block-start: 38px;
+    inset-inline-start: 50%;
+    inline-size: 30px;
+    block-size: 2px;
+    transform: translateX(-48%);
+    background-color: $grey-4;
+  }
+
+  @media (min-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+
+    inline-size: 324px;
+    min-block-size: 430px;
+    padding-inline-start: 39px;
+    padding-right: 36px;
+    padding-block-end: 40px;
+    box-sizing: border-box;
+    background-color: $base-card;
+
+    &:last-child {
+      padding-block-end: 35px;
+      border: 1px solid $grey-5;
+      background-color: $lighten;
+    }
+
+    &--load::before {
+      inset-block-start: 52px;
+      block-size: 60px;
+    }
+
+    &--load::after {
+      inset-block-start: 84px;
+      inline-size: 60px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    inline-size: 245px;
+    padding-inline-start: 40px;
+    padding-right: 37px;
+
+    &:last-child {
+      padding-block-end: 35px;
+      padding-inline-start: 35px;
+    }
+  }
+}
+
+.card__visual {
+  position: relative;
+  inline-size: 50%;
+
+  @media (min-inline-size: $tablet) {
+    inline-size: 100%;
+  }
+}
+
+.card__picture {
+  display: flex;
+  block-size: 100%;
+}
+
+.card__image {
+  margin-block-start: 14px;
+  margin-inline: auto;
+  margin-right: auto;
+
+  &--big {
+    margin-block-start: 11px;
+  }
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    inset-block-start: -63px;
+    inset-inline-start: 50%;
+    inline-size: 161px;
+    block-size: 174px;
+    margin-block-start: 0;
+    transform: translateX(-50%);
+
+    &--big {
+      inline-size: 168px;
+      block-size: 200px;
+      inset-block-start: -90px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    inset-block-start: -71px;
+
+    &--big {
+      inset-block-start: -100px;
+    }
+  }
+}
+
+.card__content {
+  inline-size: 50%;
+  margin-block-start: auto;
+  margin-block-end: 22px;
+
+  @media (min-width: $tablet) {
+    inline-size: 100%;
+    margin-block-end: 30px;
+  }
+}
+
+.card__title {
+  @include text-uppercase(16px, 20px, $darken-3);
+
+  max-inline-size: 80px;
+  margin-block-start: 0;
+  margin-block-end: 15px;
+  text-align: left;
+
+  &--load {
+    max-inline-size: 230px;
+    margin-block-end: 8px;
+    margin-inline-start: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  @media (min-inline-size: $tablet) {
+    @include text-uppercase(20px, 22px, $darken-3);
+
+    max-inline-size: 150px;
+    margin-inline-start: auto;
+    margin-right: auto;
+    margin-block-end: 21px;
+    text-align: center;
+  }
+
+  @media (min-inline-size: $desktop) {
+    margin-inline-start: 12px;
+    margin-block-end: 25px;
+
+    &--load {
+      margin-block-end: 22px;
+    }
+  }
+}
+
+.card__name {
+  @include text-uppercase(16px, 20px, $darken-2);
+
+  text-decoration: none;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    line-height: 21px;
+  }
+}
+
+.card__description {
+  @include text(12px, 16px);
+
+  &--load {
+    margin-block-start: 0;
+    margin-block-end: 21px;
+    margin-inline-start: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    inline-size: 18px;
+
+    max-inline-size: 170px;
+  }
+}
+
+.card__button {
+  inline-size: 100%;
+
+  &--all {
+    color: $text-primary;
+    background-color: $base;
+
+    &:hover {
+      background-color: $grey-5;
+    }
+
+    &:focus {
+      color: $text-primary;
+      opacity: 0.3;
+      background-color: $grey-5;
+    }
+
+    &:active {
+      color: $text-primary;
+      opacity: 0.3;
+      background-color: $grey-5;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    inline-size: 248px;
+    padding: 10px 26px;
+  }
+
+  @media (min-width: $desktop) {
+    inline-size: 100%;
+    padding: 10px 26px;
+  }
+}
+
+.card__wrap {
+  inline-size: 100%;
+
+  @media (min-width: $tablet) {
+    padding-block-start: 86px;
+  }
 }

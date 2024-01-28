@@ -7,30 +7,26 @@
 
   @media (min-width: $tablet) {
     display: flex;
+    align-items: center;
+    gap: 33px;
   }
 }
 
 .site-navigation__item {
   @media (min-width: $tablet) {
     position: relative;
-    margin-inline-end: 36px;
+    padding-block-end: 6px;
+    border-block-end: 2px solid transparent;
+    transition: border-color 0.3s ease;
 
     &--current {
-      padding-block-end: 6px;
-      border-block-end: 2px solid $base;
-    }
-
-    &:last-child {
-      margin-inline-end: 0;
+      border-color: $base;
+      transition: border-color 0.3s ease;
     }
   }
 
   @media (min-width: $desktop) {
-    margin-inline-end: 34px;
-
-    &--current {
-      padding-block-end: 5px;
-    }
+    padding-block-end: 5px;
   }
 }
 
@@ -67,7 +63,5 @@
 
   @media (min-width: $desktop) {
     @include text-uppercase(20px, 30px);
-
-    color: $lighten;
   }
 }

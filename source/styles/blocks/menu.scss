@@ -1,28 +1,39 @@
 .menu {
   display: block;
 
-  &--closed .menu__control {
-    inset-block-start: 19px;
-    inset-block-end: 19px;
-  }
+  @media (max-width: $mobile-only) {
+    &--closed .menu__control {
+      inset-block-start: 19px;
+      inset-inline-end: 20px;
 
-  &--closed .menu__navigation {
-    block-size: 0;
-    overflow: hidden;
-    transition: all 0.5s linear;
-  }
+      mask-image: url("../../images/icons/stack.svg#icon-burger");
+      mask-size: 24px 24px;
+    }
 
-  &--nojs .menu__navigation {
-    block-size: auto;
-    overflow: visible;
-    transition: all 0.5s linear;
+    &--nojs .menu__control {
+      mask-image: url("../../images/icons/stack.svg#icon-close");
+    }
+
+    &--closed .menu__navigation {
+      block-size: 0;
+      content-visibility: hidden;
+      will-change: block-size, content-visibility;
+      transition: all 0.5s linear;
+    }
+
+    &--nojs .menu__navigation {
+      block-size: auto;
+      overflow: visible;
+      content-visibility: visible;
+      transition: all 0.5s linear;
+    }
   }
 }
 
 .menu__control {
   position: absolute;
-  inset-block-start: 19px;
-  inset-inline-end: 20px;
+  inset-block-start: 18px;
+  inset-inline-end: 16px;
 
   display: flex;
   inline-size: 26px;
@@ -31,8 +42,23 @@
   padding: 0;
   background-color: transparent;
 
-  &:hover {
+  mask-image: url("../../images/icons/stack.svg#icon-close");
+  mask-size: 18px 18px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: $darken;
+
+  transition: opacity 0.3s ease;
+
+  &:hover,
+  &:focus {
     cursor: pointer;
+    background-color: $base;
+    transition: background-color 0.3s ease;
+  }
+
+  &:focus {
+    outline: 2px solid $darken;
   }
 
   @media (min-width: $tablet) {
@@ -40,32 +66,11 @@
   }
 }
 
-.menu__close {
-  display: none;
-  inline-size: 18px;
-  block-size: 18px;
-  margin: auto;
-
-  &.active {
-    display: block;
-  }
-}
-
-.menu__open {
-  display: none;
-  inline-size: 24px;
-  block-size: 16px;
-  margin: auto;
-
-  &.active {
-    display: block;
-  }
-}
-
 .menu__navigation {
   block-size: auto;
-  overflow: visible;
+  content-visibility: visible;
   transition: all 0.5s linear;
+  will-change: block-size, content-visibility;
 
   @media (min-width: $tablet) {
     block-size: auto;

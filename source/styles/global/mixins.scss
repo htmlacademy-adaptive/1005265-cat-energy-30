@@ -5,12 +5,20 @@
   margin-inline: auto;
 
   @media (min-width: $tablet) {
+    max-inline-size: 708px;
     padding-inline: 30px;
   }
 
   @media (min-width: $desktop) {
     max-inline-size: 1220px;
     padding-inline: 110px;
+  }
+}
+
+@mixin container-2 {
+  @media (min-width: $tablet) {
+    max-inline-size: 628px;
+    padding-inline: 70px;
   }
 }
 
@@ -36,13 +44,12 @@
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
-  line-height: 36px;
+  line-height: 1;
   text-align: center;
   color: $color;
 
   @media (min-width: $tablet) {
     font-size: 60px;
-    line-height: 60px;
     text-align: start;
   }
 }
@@ -84,10 +91,11 @@
   font-size: $size;
   line-height: $line-height;
   color: $color;
+  text-wrap: balance;
 
   @media (min-width: $tablet) {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: $size;
+    line-height: $line-height;
   }
 }
 
@@ -99,6 +107,7 @@
   line-height: $line-height;
   text-align: center;
   text-transform: uppercase;
+  text-wrap: balance;
   color: $color;
 }
 
@@ -108,6 +117,7 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
+  text-wrap: balance;
   color: $darken;
 }
 

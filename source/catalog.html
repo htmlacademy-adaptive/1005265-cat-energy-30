@@ -15,7 +15,7 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-wrapper">
+      <div class="page-header__wrapper">
         <a class="logo page-header__logo" href="/index.html">
           <picture class="logo__picture">
             <source
@@ -45,7 +45,7 @@
           <picture class="company-name">
             <source
               class="company-name__image"
-              width="101"
+              width="118"
               height="18"
               media="(min-width: 1440px)"
               srcset="./images/logo-text-lighten.svg"
@@ -55,14 +55,14 @@
           </picture>
         </a>
 
-        <div class="page-header__menu menu">
+        <div class="page-header__menu menu menu--closed menu--nojs">
           <button
             class="menu__control"
             type="button"
             aria-label="Закрыть меню"
           ></button>
 
-          <nav class="site-navigation">
+          <nav class="site-navigation menu__navigation">
             <menu class="site-navigation__list">
               <li class="site-navigation__item">
                 <a class="site-navigation__link" href="/index.html">Главная</a>
@@ -80,7 +80,9 @@
     </header>
 
     <main class="page-main">
-      <h1 class="page-main__heading">Каталог продукции</h1>
+      <div class="page-main__wrapper">
+        <h1 class="page-main__heading">Каталог продукции</h1>
+      </div>
 
       <section class="catalog">
         <h2 class="visually-hidden">Основные товары</h2>

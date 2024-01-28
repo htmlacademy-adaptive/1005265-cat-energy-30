@@ -1,3 +1,36 @@
-.page-main {
-  color: $text-primary;
+.page-main__wrapper {
+  @include container;
+}
+
+.page-main__heading {
+  @include h1;
+  margin: 0;
+  margin-block-end: 41px;
+
+  text-align: start;
+
+  @media (min-width: $tablet) {
+    margin-block-end: 84px;
+  }
+}
+
+.page-main__wrapper:has(.page-main__description) .page-main__heading {
+  margin-block-end: 37px;
+
+  @media (min-width: $tablet) {
+    margin-block-end: 54px;
+  }
+}
+
+.page-main__description {
+  @include text;
+  inline-size: min(85%, 323px);
+  text-transform: uppercase;
+
+  margin-block-start: 0;
+  margin-block-end: 39px;
+
+  @media (min-width: $tablet) {
+    margin-block-end: 66px;
+  }
 }

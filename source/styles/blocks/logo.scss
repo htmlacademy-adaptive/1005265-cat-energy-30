@@ -1,4 +1,8 @@
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+
   transition: 0.3s ease;
   cursor: pointer;
 
@@ -14,10 +18,23 @@
 
   @media (min-width: $tablet) {
     max-inline-size: 174px;
+    gap: 13px;
   }
 
   @media (min-width: $desktop) {
     max-inline-size: 202px;
+  }
+}
+
+.logo__picture {
+  max-block-size: 38px;
+
+  @media (min-width: $tablet) {
+    max-block-size: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    max-block-size: 59px;
   }
 }
 

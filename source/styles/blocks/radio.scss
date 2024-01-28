@@ -1,3 +1,62 @@
 .radio {
-  color: $text-primary;
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--disabled {
+    opacity: 0.3;
+  }
+}
+
+.radio__name {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.radio__point {
+  position: relative;
+  min-inline-size: 30px;
+  block-size: 30px;
+
+  margin: 0;
+  border-radius: 50%;
+  border: 1px solid $grey;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    inline-size: 40px;
+    block-size: 40px;
+  }
+}
+
+.radio__input {
+  position: absolute;
+  appearance: none;
+
+  &:checked + .radio__name .radio__point::after {
+    position: absolute;
+    content: "";
+    inline-size: 14px;
+    block-size: 14px;
+
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
+    border-color: $base;
+    background-color: $base;
+    cursor: pointer;
+  }
+
+  &:focus + .radio__name {
+    outline: 2px solid $darken;
+  }
+
+  &[disabled] + .radio__name {
+    opacity: 0.3;
+  }
 }

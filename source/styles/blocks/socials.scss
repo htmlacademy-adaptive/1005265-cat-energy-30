@@ -5,25 +5,16 @@
   align-items: center;
   justify-content: center;
   gap: 24px;
-  padding-top: 20px;
-  padding-bottom: 19px;
-
-
-  @media (min-width: $tablet) {
-    margin-left: 25px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 
   @media (min-width: $desktop) {
-    margin-bottom: 5px;
+    margin-block-end: 5px;
   }
 }
 
 .socials__link {
   display: block;
-  width: 28px;
-  height: 22px;
+  inline-size: 28px;
+  block-size: 22px;
   background-color: $text-secondary;
   mask-repeat: no-repeat;
   transition: 0.3s ease;

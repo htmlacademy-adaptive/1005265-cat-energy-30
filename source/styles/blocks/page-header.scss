@@ -1,5 +1,10 @@
 .page-header {
-  border-bottom: 1px solid $grey-2;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+
+  border-block-end: 1px solid $grey-2;
+  margin-block-end: 27px;
   background-color: $lighten;
   color: $darken;
 
@@ -8,11 +13,19 @@
     padding-block-start: 25px;
     padding-block-end: 0;
     border-block-end: none;
+
+    &--index {
+      background-color: transparent;
+    }
   }
 
   @media (min-width: $desktop) {
-    margin-block-end: 71px;
-    padding-block-start: 54px;
+    margin-block-end: 74px;
+    padding-block-start: 55px;
+
+    &--index {
+      position: static;
+    }
   }
 }
 
@@ -39,9 +52,8 @@
 .page-header__logo {
   position: relative;
   max-inline-size: 190px;
-  margin-block-start: 12px;
-  margin-block-end: 16px;
-  padding-block: 0;
+  padding-block-start: 13px;
+  padding-block-end: 13px;
   padding-inline: 20px;
 
   @media (min-width: $tablet) {
